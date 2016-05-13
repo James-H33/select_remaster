@@ -1,0 +1,15 @@
+Select Vettes
+
+// Steps to run this
+
+1- npm install
+2- gulp
+
+Be sure to check ports:
+
+Required Ports
+-- 4000
+-- 7000
+
+Database Port
+-- 27017

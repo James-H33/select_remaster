@@ -1,0 +1,231 @@
+//**************************************
+// ABOUT STYLES
+//**************************************
+
+.about-intro-wrapper
+  width: 100%
+  height: 100%
+
+.about-intro-display
+  width: 100%
+  height: 100%
+  max-width: 600px
+  padding: 30px 0
+  margin: 0 auto
+  text-align: center
+
+  img
+    width: 100%
+    height: 100%
+
+
+.about-intro-header
+  width: 100%
+  height: 100%
+  position: relative
+  overflow-y: hidden
+
+  h2
+    font-size: 50px
+    font-family: $font-med
+    letter-spacing: 2px
+    transform: translateY(250px)
+    transition: $trans-speed-text
+
+    &.active-about-intro
+      transform: translateY(0)
+
+  p
+    color: $gray
+    font-size: 25px
+
+.about-slide-icon
+  width: 60px
+  height: 60px
+  position: relative
+  margin: 30px auto
+  cursor: pointer
+
+  i
+    font-size: 30px
+    position: absolute
+
+    &:nth-child(1)
+      font-size: 60px
+      margin-left: -20px
+      top: 15px
+
+    &:nth-child(2)
+      margin-left: -10px
+      transition: $trans-speed-text
+
+  &:hover
+
+    i:nth-child(2)
+      transform: translateY(22px)
+
+.about-history-wrapper
+  width: 100%
+  height: 100%
+
+.about-history-display
+  width: 100%
+  height: 100%
+  max-width: 1080px
+  margin: 50px auto 0 auto
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+
+.about-history-bimg
+  width: 90%
+  height: 100%
+  background:
+    image: url('/imgs/building.jpg')
+    size: cover
+    repeat: no-repeat
+  display: none
+  position: absolute
+  right: 0
+  bottom: 0
+  top: 0
+  z-index: -1
+
+@media (min-width: 769px)
+
+  .about-history-bimg
+    display: initial
+
+.about-history-info
+  width: 100%
+  height: 100%
+  margin: 0
+  margin-top: 70px
+  text-align: center
+  background: #fcfcfc
+  border-top: 1px solid $black
+  opacity: 0
+  transform: translateX(-250px)
+  transition: all 0.8s linear
+
+  &.active-history
+    opacity: 1
+    transform: translateX(0)
+
+  h2
+    font-size: 25px
+    font-family: $font-thin
+    margin-top: 30px
+    letter-spacing: 3px
+
+  p
+    color: rgba(0, 0, 0, 0.5)
+    font-size: 16px
+    font-family: "Josefin Sans", arial
+    line-height: 32px
+    margin: 30px 20px
+    letter-spacing: 1px
+    text-align: justify
+
+@media (min-width: 769px)
+
+  .about-history-info
+    margin-right: 50%
+
+    p
+      margin: 30px 50px
+
+.about-three-wrapper
+  width: 100%
+  height: 100%
+  display: block
+
+
+.about-three-display
+  width: 100%
+  height: 100%
+  max-width: 1080px
+  margin: 50px auto 50px auto
+
+  li
+    font-size: 20px
+    color: $black
+    width: 100%
+    height: 100%
+    // background: #fcfcfc
+    list-style: none
+    position: relative
+
+    img
+      width: 100%
+      height: 100%
+
+@media (min-width: 769px)
+
+  .about-three-display li
+    background: #fcfcfc
+
+    img
+      width: 50%
+      display: inline-block
+
+.three
+  width: 100%
+  display: inline-block
+  vertical-align: top
+  text-align: center
+
+
+  h2
+    font-size: 25px
+    font-family: $font-thin
+    text-align: center
+    margin-top: 30px
+    letter-spacing: 3px
+
+  p
+    width: auto
+    display: inline-block
+    color: $gray
+    font-size: 16px
+    font-family: $font-med
+    margin: 20px 20px
+    line-height: 32px
+    letter-spacing: 1px
+    text-align: justify
+
+@media (min-width: 769px)
+
+  .three
+    width: 50%
+    opacity: 0
+
+    p
+      margin: 20px 50px
+
+
+
+.-one
+  transform: translateX(250px)
+  transition: all 0.8s linear
+
+  &.active-one
+    opacity: 1
+    transform: translateX(0)
+
+.-two
+  transform: translateX(-250px)
+  transition: all 0.8s linear
+
+  &.active-two
+    opacity: 1
+    transform: translateX(0)
+
+.-three
+  transform: translateX(250px)
+  transition: all 0.8s linear
+
+  &.active-three
+    opacity: 1
+    transform: translateX(0)

@@ -1,0 +1,46 @@
+//**************************************
+// FOOTER STYLES
+//**************************************
+
+.footer-wrapper
+  width: 100%
+  height: 100%
+
+.footer-display
+  width: 90%
+  height: 100px
+  max-width: 900px
+  margin: 0 auto
+  display: flex
+  justify-content: center
+  align-items: center
+  border-top: 1px solid $black
+
+  a
+    color: $black
+    font-size: 16px
+    font-family: $font-med
+    font-weight: 300
+    margin: 0 5px
+    position: relative
+    text-decoration: none
+
+    &:before
+      content: ""
+      background: $black
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 2px
+      margin-top: 5px
+      transition: 0.3s linear
+      transform: scale(0)
+
+    &:hover:before
+      transform: scale(1)
+
+@media (min-width: 769px)
+
+  .footer-display a
+    font-size: 18px

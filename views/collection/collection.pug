@@ -1,0 +1,66 @@
+include ../partials/header.pug
+
+section.collection-intro-wrapper
+  div.collection-intro-display
+    img(src=""+ item.images[0] +"")
+    li
+      h1= item.year
+    li
+      p= item.nameExt
+    div.collection-slide-icon
+      i(class="fa fa-angle-down",aria-hidden="true")
+      i(class="fa fa-angle-down",aria-hidden="true")
+
+section.collection-about-wrapper
+  div.collection-about-display
+    div.collection-about-bimg(style='background: url(' + item.images[1] + ')')
+    div.about-info
+      h2= item.year + ' ' + item.name
+      p= item.info[0]
+      p= item.info[1]
+      figure
+        img(src=""+ item.images[2] +"")
+
+section.collection-spec-wrapper
+  div.collection-spec-display
+    div.spec-col-info
+      h2= item.name + ' Specs'
+      p= item.info[2]
+      h2 Critical Designs
+      ul
+        li Ipsum dolor sit amet
+        li Consectetur adipisicing elit
+        li Sed do eiusmod tempor
+    div.spec-col-img
+      img(src=""+ item.images[3] +"")
+      img(src=""+ item.images[4] +"")
+
+section.collection-history-wrapper
+  div.collection-history-display
+    figure.history-layout-top
+      div
+        h1 DOCUMENTS & HISTORY
+      img(src="https://images.unsplash.com/photo-1433840688634-c05a545c2594?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=f56174e4a97406c8a50a06edc2876b76")
+    div.history-layout-bottom
+      div.history-one.col
+        img(src=""+ item.histImage[0] +"")
+      div.history-two.col
+        h2 Timeless Value
+        p= item.info[3]
+
+section.collection-carousel-wrapper
+    div.collection-carousel-display
+      h1 VIEW MORE CLASSICS
+      ul
+        li
+          img(src="http://www.hessclassic.com/app/uploads/2016/03/hessclassic-ferrari_detoure.png?82f50c")
+          p Porsche 356
+        li
+          img(src="http://www.hessclassic.com/app/uploads/2016/03/hessclassic-slider-bentley.png?82f50c")
+          p Porsche 356
+        li
+          img(src="http://www.hessclassic.com/app/uploads/2016/04/hessclassic-LAMBORGHINI_detouree.png?82f50c")
+          p Porsche 356
+
+
+include ../partials/footer.pug

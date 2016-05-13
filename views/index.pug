@@ -1,0 +1,17 @@
+include ./partials/header.pug
+section.index-intro-wrapper
+  div.index-intro-display
+    h1 THE COLLECTION
+    ul
+      - items.forEach(function(item) {
+        li
+          a(href="/collection/" + item._id + "")
+            img(src="" + item.images[0] + "")
+            p= item.name
+      - })
+
+
+
+
+
+include ./partials/footer.pug
