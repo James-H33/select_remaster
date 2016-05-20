@@ -142,6 +142,7 @@ function cHistoryTxtTwoSlide() {
 // Intro Header Animations || About Page
 function aIntroAnimations() {
   $('.about-intro-header h2').addClass('active-about-intro');
+  $('.about-intro-header p').addClass('active-about-intro');
 }
 
 // History Slide in || About Page
