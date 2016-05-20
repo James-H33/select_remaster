@@ -14,6 +14,7 @@ var Vehicle = require('./models/vehicleModel');
 // Routes
 var collectionRoutes = require('./routes/collectionRoutes');
 var aboutRoutes      = require('./routes/aboutRoutes');
+var contactRoutes    = require('./routes/contactRoutes');
 
 mongoose.connect('mongodb://localhost/select_vettes_produciton');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -40,6 +41,7 @@ app.get('/home', function(req, res) {
 // USE ROUTES
 app.use('/', collectionRoutes);
 app.use('/', aboutRoutes);
+app.use('/', contactRoutes);
 
 app.listen(port, portIP, function(server){
   console.log('Server has started...');
