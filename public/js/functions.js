@@ -184,14 +184,16 @@ function aHistoryOneSlide() {
 
 // Fixed background Slide on scroll || Contact Page
 function cIntroSlideBackground() {
-  $('.contact-intro-img').css({
-    'background-position' : '0px '+increment+'px'
-  });
+  if (window.innerWidth > 769) {
+    $('.contact-intro-img').css({
+      'background-position' : '0px '+increment+'px'
+    });
+  }
 }
 
 // Googpe Maps API
 function initMap() {
-  var myLatLng = {lat: -25.363, lng: 131.044};
+  var myLatLng = {lat: 27.498928, lng: -82.574819};
 
   // Create a map object and specify the DOM element for display.
   var map = new google.maps.Map(document.getElementById('map'), {
