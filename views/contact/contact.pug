@@ -8,10 +8,19 @@ section.contact-intro-wrapper
 section.contact-map-wrapper
   div.contact-map-display
     li
-      h2 Select Motorcars Southeast LLC
-      p Bradenton/Sarasota, FL
+      figure
+        h2 Select Motorcars Southeast LLC
+        p Bradenton/Sarasota, FL
     li
-      p Email: selectVettes@cars.com
-      p Phone: (813) 205-8132
+      figure
+        p Email: selectVettes@cars.com
+        p Phone: (813) 205-8132
+
+section.google-maps-wrapper
+  div.google-maps-display
+    div#map
+
+script(src="http://maps.googleapis.com/maps/api/js?sensor=false")
+script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEQPAotL4S6t6CgD9dzZ8gJQf-2Bsi_Ok&callback=initMap", async defer)
 
 include ../partials/footer.pug
