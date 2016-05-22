@@ -2,8 +2,7 @@ var navIcon = document.querySelector('.nav-icon');
 var navWrapper = document.querySelector('.nav-wrapper');
 var navDisplayLi = document.querySelectorAll('.nav-display li');
 var navIconSpan = document.querySelectorAll('.nav-icon span');
-
-
+var increment = 0;
 
 //***************************************************
 //            CLICK EVENTS
@@ -28,12 +27,17 @@ $('.about-slide-icon').on('click', function() {
   }, 1000)
 })
 
-var loc = (window.location.pathname).substr(0, 11)
+//***************************************************
+//            EVENTS BY LOCATIONS
+//***************************************************
+
+// var loc is used with substr to varify location path
+var loc = (window.location.pathname);
 
 $(window).on('scroll', function() {
 
   // Collection Page Functions
-  if (loc == '/collection') {
+  if (loc.substr(0, 11) == '/collection') {
     aboutInfo();
     aboutImg();
     specInfo();
@@ -43,11 +47,21 @@ $(window).on('scroll', function() {
 }
 
 // About Page Functions
-  if (loc == '/about'){
+  if (loc.substr(0, 6)  == '/about'){
     aHistorySlide();
     aHistoryOneSlide()
   }
+
+
+  // Contact Page Functions
+  if (loc.substr(0, 8)  == '/contact') {
+    increment = $(window).scrollTop() / -2;
+    cIntroSlideBackground();
+  }
+
+
 })
+
 
 $(window).on('load', function() {
   setTimeout(function(){
@@ -55,6 +69,9 @@ $(window).on('load', function() {
     aIntroAnimations()
   }, 300)
 })
+
+// Call Google Maps function || Contact Page
+initMap();
 
 
 
@@ -89,7 +106,6 @@ function navIconRotate() {
     navIconSpan[i].classList.toggle('active-rotate');
   }
 }
-
 
 // About Info Function || Collection Page
 function aboutInfo() {
@@ -163,4 +179,31 @@ function aHistoryOneSlide() {
   if ($(window).scrollTop() >= $('.-three').offset().top - ($(window).height() * 0.8)) {
     $('.-three').addClass('active-three');
   }
+}
+
+
+// Fixed background Slide on scroll || Contact Page
+function cIntroSlideBackground() {
+  $('.contact-intro-img').css({
+    'background-position' : '0px '+increment+'px'
+  });
+}
+
+// Googpe Maps API
+function initMap() {
+  var myLatLng = {lat: -25.363, lng: 131.044};
+
+  // Create a map object and specify the DOM element for display.
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    scrollwheel: false,
+    zoom: 4
+  });
+
+  // Create a marker and set its position.
+  var marker = new google.maps.Marker({
+    map: map,
+    position: myLatLng,
+    title: 'Hello World!'
+  });
 }
