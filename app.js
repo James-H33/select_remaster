@@ -5,7 +5,7 @@ var bodyParser  = require('body-parser');
 var seedDB      = require('./seed');
 
 // Ports
-var port = process.env.port || 4000;
+var port = process.env.PORT || 4000;
 var portIP = process.env.IP;
 
 // Models
