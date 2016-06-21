@@ -16,8 +16,8 @@ var collectionRoutes = require('./routes/collectionRoutes');
 var aboutRoutes      = require('./routes/aboutRoutes');
 var contactRoutes    = require('./routes/contactRoutes');
 
-mongoose.connect('mongodb://localhost/select_vettes_produciton');
-// mongoose.connect('mongodb://retsbud:String33@ds043398.mlab.com:43398/s_vettes')
+// mongoose.connect('mongodb://localhost/select_vettes_produciton');
+mongoose.connect('mongodb://retsbud:String33@ds043398.mlab.com:43398/s_vettes')
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'pug');
