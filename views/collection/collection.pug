@@ -13,7 +13,7 @@ section.collection-intro-wrapper
 
 section.collection-about-wrapper
   div.collection-about-display
-    div.collection-about-bimg(style='background: url(' + item.images[1] + ')')
+    div.collection-about-bimg(style='background: url(' + item.images[1] + '); background-repeat: no-repeat;')
     div.about-info
       h2= item.year + ' ' + item.name
       p= item.info[0]
@@ -33,7 +33,8 @@ section.collection-spec-wrapper
         li Sed do eiusmod tempor
     div.spec-col-img
       img(src=""+ item.images[3] +"")
-      img(src=""+ item.images[4] +"")
+      if item.images[4]
+        img(src=""+ item.images[4] +"")
 
 section.collection-history-wrapper
   div.collection-history-display
@@ -54,13 +55,13 @@ section.collection-carousel-wrapper
       ul
         li
           img(src="/imgs/ferrari-green.png")
-          p Porsche 356
+          p Aston Martin
         li
           img(src="/imgs/bentley-gray.png")
-          p Porsche 356
+          p Bentely
         li
           img(src="/imgs/lamb-red.png")
-          p Porsche 356
+          p Lamborghini
 
 
 include ../partials/footer.pug
