@@ -45,11 +45,11 @@ var data = [
     nameExt: 'Corvette Coupe 427',
     year: '1965',
     images: [
-    '/imgs/red-corv_01.png',
-    '/imgs/p911White-2.jpg',
-    '/imgs/p911White-3.jpg',
-    '/imgs/p911White-4.jpg',
-    '/imgs/p911White-5.jpg'
+    '/imgs/red-67-01.png',
+    '/imgs/red-67-05.jpg',
+    '/imgs/red-67-03.jpg',
+    '/imgs/red-67-04.jpg',
+    '/imgs/red-67-05.jpg',
    ],
     info: [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer.',
@@ -57,7 +57,7 @@ var data = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer.',
       'Reese Lindel rem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ipsum dolor sit amet rem ipsum dolor sit amet.'
     ],
-    histImage: ['/imgs/p911White-hist.jpg'],
+    histImage: ['/imgs/red-67-01.png'],
   }
 ]
 

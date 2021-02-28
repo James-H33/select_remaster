@@ -5,11 +5,12 @@ var Vehicle = require('../models/vehicleModel');
 
 
 router.get('/collection/:id', function(req, res) {
-  Vehicle.findById(req.params.id, function(err, invItem) {
+  Vehicle.findById(req.params.id, function(err, item) {
+    console.log(item)
     if(err) {
       console.log(err);
     } else {
-      res.render('collection/collection', {item: invItem});
+      res.render('collection/collection', { item });
     }
   })
 })
